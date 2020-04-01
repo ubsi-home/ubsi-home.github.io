@@ -185,6 +185,22 @@ public USEntry getEntryAnnotation();
 
 
 
+### 获得服务容器ID
+
+```
+public String getContainerId();
+```
+
+参数：
+
+- 无
+
+返回：
+
+- 服务容器ID，格式："host#port"
+
+
+
 ### 获得服务容器的版本
 
 ```
@@ -214,6 +230,22 @@ public boolean getContainerRelease();
 返回：
 
 - 服务容器的发行状态：是否Release
+
+
+
+### 检查Container是否开始服务
+
+```
+public boolean isContainerReady();
+```
+
+参数：
+
+- 无
+
+返回：
+
+- 服务容器是否已经进入正常服务状态
 
 
 

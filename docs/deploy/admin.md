@@ -173,7 +173,7 @@ UBSI Web管理器由以下几个部分构成：
   
      ```
      {
-       "url": "http://{rest-server-host}:{rest-port}"
+       "url": "http://{rest-server-host}:{rest-port}/ubsi"
      }
      ```
   
@@ -194,20 +194,34 @@ UBSI Web管理器由以下几个部分构成：
        }
      ]
      ```
-  
+
   4. 启动Web服务：
-      ```
-      java -jar rewin.rest.ubsi.admin-1.0.0.jar
-      ```
-      
+  
+     ```
+     java -jar rewin.rest.ubsi.admin-1.0.0.jar
+     ```
   
 * 部署Web前端
 
-  {待补充：部署nginx代理服务器，配置nginx的代理路径，下载前端页面文件}
+  1. 准备nginx环境，具体的安装/配置请自行参阅相关文档
 
-* 部署完成，Web管理器的URL地址：
+  2. 在  https://ubsi-home.github.io/download 页面中下载rewin.web.ubsi.admin-1.0.0.zip，并将其解压到nginx的 "/" 路径下
 
-  http://{nginx-server-host}:{nginx-port}
+  3. 修改nginx的配置文件，将 "/ubsi" 的路径请求转发到Web服务，例如：
+
+     ```
+         location /ubsi {
+             proxy_set_header Host $host;
+             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+             proxy_pass http://{rest-server-host}:{rest-port}/ubsi;
+         }
+     ```
+
+  4. 部署完成，启动nginx后可以访问Web管理器：
+
+     ```
+     http://{nginx-server-host}:{nginx-port}
+     ```
 
 
 

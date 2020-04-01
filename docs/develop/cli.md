@@ -104,7 +104,98 @@ localhost#7112>
   localhost#7112>
   ```
 
-  
+
+
+
+### rewin.ubsi.cli.Script
+
+通过命令行执行一个JavaScript脚本：
+
+```
+java -cp rewin.ubsi.core-1.0.0-jar-with-dependencies.jar rewin.ubsi.cli.Script -h localhost
+```
+
+这时可能会看到如下输出：
+
+```
+Error: JavaScript file "script.js" not found!
+
+Usage: Script [script.js] [-h host] [-p port]
+
+Api of '$' in JavaScript:
+  _array([...]); 将JS数组转换为Java的Object[]
+  _bigint('str'); 将JS字符串转换为Java的BigInteger
+  _bignum('str'); 将JS字符串转换为Java的BigDecimal
+  _byte(n); 将JS的number转换为Java的byte
+  _bytes([...]); 将JS的number数组转换为Java的byte[]
+  _double(n); 将JS的number转换为Java的double
+  _int(n); 将JS的number转换为Java的int
+  _list([...]); 将JS数组转换为Java的List
+  _long(n); 将JS的number转换为Java的long
+  _set([...]); 将JS数组转换为Java的Set
+  broadcast('channel', data); 发送一条广播消息
+  debug('msg'); 输出一条debug信息
+  error('msg'); 输出一条error信息
+  header({...}); 设置UBSI请求的Header
+  host('host', port); 设置UBSI请求的目标容器，host为null表示路由模式
+  info('msg'); 输出一条info信息
+  request('service', 'entry', ...); 发送UBSI请求并得到返回结果（同步方式）
+  requestJson('service', 'entry', ...); 发送UBSI请求并得到JSON字符串格式的返回结果（同步方式）
+  result(data); 设置脚本的返回结果，如果不设置，则将最后一条语句的值作为脚本结果
+  sleep(millis); 暂停millis毫秒
+  throwEvent('channel', data); 发送一条事件消息
+  timeout(seconds); 设置UBSI请求的超时时间（秒数），0表示不限，-1表示使用缺省值
+  version('min_ver', 'max_ver', release); 设置UBSI请求的服务版本限制，release取值：-1-不限，0-非release，1-release
+```
+
+
+
+手工创建一个JavaScript脚本文件script.js，内容如下：
+
+```
+// 这是一段测试用的JavaScript代码
+
+Packages.rewin.ubsi.cli.Request.printJson('哈哈哈');   // 直接调用Java类
+
+$.info('开始执行啦');        // 输出运行日志
+
+try {
+    var res = $.request('my.samples.count', 'getModels');   // 请求微服务
+    $.result(res);          // 设置脚本的运行结果
+    $.info('执行结束啦');    // 输出运行日志
+} catch(err) {
+    $.error('执行出错啦：' + err);    // 输出错误日志
+    throw err;              // 抛出异常，表示脚本执行失败
+}
+```
+
+
+
+再次执行Script命令行工具，可以得到如下结果：
+
+```
+"哈哈哈"
+[INFO]	2019-11-24 14:47:01.625	liuxd-HP	rewin.ubsi.cli	rewin.ubsi.cli.Script	jdk.nashorn.internal.scripts.Script$\^eval\_#:program()#6	script	"开始执行啦"
+[INFO]	2019-11-24 14:47:05.766	liuxd-HP	rewin.ubsi.cli	rewin.ubsi.cli.Script	jdk.nashorn.internal.scripts.Script$\^eval\_#:program()#11	script	"执行结束啦"
+
+执行过程：
+001.115 [INFO] 开始执行啦
+005.256 [INFO] 执行结束啦
+
+执行结果：
+{
+  "my.service.samples.CountService$Counts: 访问计数": {
+    "entry1": "long, entry1的访问数量",
+    "entry2": "long, entry2的访问数量"
+  }
+}
+```
+
+
+
+> 脚本机制为业务能力的扩展提供了极大的灵活性。UBSI的基础微服务rewin.ubsi.tester（自动测试）以及rewin.ubsi.scheduler（编排调度）都使用了JavaScript脚本作为测试任务或定时任务进行执行。
+
+
 
 ### rewin.ubsi.cli.Stress
 

@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    font-family:Microsoft YaHei;
+    line-height: 1.7;
+}
+a{
+    color: #333;
+}
+a:hover{
+    text-decoration: none;
+}
+.banxin{
+    width: 733px;
+    margin: 0 auto;
+}
+body{
+    overflow:scroll; overflow-x:hidden;
+    background-color:rgb(248,248,248 );
+    height:100%;
+}
+.tab::after{
+    content:"";
+    clear:both;
+    display:block;
+}
+.tab{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background:rgba(255,255,255,0.7);
+    z-index: 999;
+    box-shadow:0 1px 4px 0 #eee;
+}
+.logo1{
+    position: absolute;
+    top: 16px;
+    margin: 0 20px;
+    height: 58px;
+}
+.dropdown{
+    display:none;
+}
+.C{
+    width:380px;
+    height:90px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+.C1,.C2{
+    font-size: 18px;
+    margin-right:40px;
+}
+.C2 a{
+    color:#2db5a3 ;
+}
+.C1 a:hover{
+     color:#2db5a3;
+}
+a,img{border:0;}
+/* flexslider */
+.background{
+    width: 100%;
+}
+.banxin div table{
+    width: 733px;
+    margin-top: 80px;
+    border-collapse: separate;
+    border-spacing: 30px;
+}
+.biaoge2{
+    display: none;
+}
+.img,
+.second,
+.date{
+    vertical-align: top;
+}
+.second{
+    width: 500px;
+    
+}
+.second a{
+    margin-left: 10px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.second p{
+    text-indent: 2em;
+}
+.second p a{
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+}
+.second p a:hover{
+    color: #2db5a3;
+}
+.date{
+    font-size: 13px;
+    color: #999;
+}
+.gengduo{
+    color:#fff;
+    font-size:23px;
+    line-height:41px;
+    display: block;
+    text-align:center;
+}
+.anniu{
+   padding: 50px 0;
+}
+.name1{
+    /* width:100%;
+    height:200px;
+    padding:10px 0; */
+     background-color:#5e6664;
+}
+.name01{
+    /* height:46px; */
+    /* width:100%; */
+    /* padding:10px 0; */
+    margin-left:124.5px;
+}
+.N1{
+    height: 130px;
+    padding: 40px 0;
+}
+.imgerweima{
+    margin:0 125px;
+}
+.lianxi{
+    float: left;
+    padding-left: 260px;
+}
+.gongsi{
+    float: right;
+    padding-right: 260px;
+}
+.dianhua,
+.youxiang{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+}
+.gongsi p{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+}
+.img7{
+    width:18px;
+    vertical-align:-4px;
+    margin-right: 10px;
+}
+.img8{
+    width:18px;
+    vertical-align:-6px;
+    margin-right: 10px;
+}
+
+ .biaoge1 tr .img{
+     width: 20px;
+ }
+ .biaoge1 tr img{
+     width: 40px;
+ }
+ .btn-group button img{
+    width: 20px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+  .dropdown-menu{
+      position: static;
+      width: 120%;
+  }
+  .dropdown-menu span div{
+      margin-top: 20px;
+  }
+  .dropdown-menu span{
+      padding: 0 49px;
+  }
+  /* .dropdown-menu span .xiazai1{
+      display: inline;
+      font-size: 14px;
+      color: #333;
+      font-weight: 400;
+  } */
+  .dropdown-menu p{
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.btn-group > .btn{
+    width: 27px;
+    height: 27px;
+    padding: 0;
+}
+.dropdown-menu li span{
+    color: #666;
+    font-size: 16px;
+
+}
+.dropdown-menu li p a{
+    font-size: 15px;
+    color: #999;
+    cursor: pointer;
+}
+.jianjie a:hover{
+    color: #2db5a3;
+}
+.dropdown-menu li a{
+    margin-left: 0;
+    font-size: 16px;
+}
+.dropdown-menu li span>a:hover{
+    color: #2db5a3;
+   
+}
+ @media only screen and (max-width: 767px) {
+    .Bg{ width: 100%; margin:0 auto }
+    }
+    @media only screen and (min-width: 650px) and (max-width:767px) {
+        .C{
+            font-family:Comic Sans MS;
+            font-size:14px;
+        }
+        .Bg{
+            height:auto;
+            padding-bottom: 0px;
+        }
+        .weifuwu img{
+            margin-left: -330px;
+            width: 100%;
+        }
+        .logo1{
+            height: 40px;
+            position:absolute;
+            top: 25px;
+        }
+        .background{
+            width: auto;
+            height:640px;
+        }
+        .jiantou,.jiantou02{
+            display:none;
+        }
+        .W{
+            position:absolute;
+            left:50%;
+            margin-left: -358px;
+            letter-spacing: 0;
+            top: 20%;
+        }
+        .W2{
+            text-indent: 4em;
+        }
+        .weifuwu{
+            height: 392px;
+        }
+        .daohang1,.daohang2 {
+            background-color:rgb(85,26,139);
+            border: none;
+            cursor: pointer;
+            width:24px;
+            height:2px;
+            margin-bottom:6px;
+        }
+            .daohang3 {
+            background-color:rgb(85,26,139);
+            border: none;
+            cursor: pointer;
+            width:24px;
+            height:2px;
+        }
+        
+        /* 容器 <div> - 需要定位下拉内容 */
+        .dropdown {
+            float:right;
+            margin:30px 20px 0 0;
+            display: inline-block;
+        }
+        .name1{
+            position:relative;
+            margin-top:10px;
+            width:100%;
+            height:174px;
+        }
+        .name01{
+            /* height:322px; */
+            width:100%;
+            margin:0 auto;
+        }
+        .anniu{
+            position:relative;
+            padding:20px 0;
+        }
+        
+        .img6{
+            margin-bottom:10px;
+        }
+        .imgerweima{
+            width:100%;
+            position:relative;
+            padding:0;
+            margin:0;
+            /* height:272px; */
+        }
+        
+        .img6{
+            position:relative;
+            left:43%;
+        }
+        .lianxi{
+            text-align: center;
+            display: block;
+            margin:0 auto;
+            float: none;
+            padding-left: 0;
+        }
+        .gongsi{
+            float: none;
+            padding-right: 0;
+            text-align: center;
+        }
+        .gongsi p{
+            margin: 0;
+        }
+        
+        /* 下拉内容 (默认隐藏) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000;
+            width:300px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        
+        /* 下拉菜单的链接 */
+        .dropdown-content a {
+            color:#fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        /* 鼠标移上去后修改下拉菜单链接颜色 */
+        .dropdown-content a:hover {color: #2db5a3;}
+        
+        /* 在鼠标移上去后显示下拉菜单 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+            right:0;
+        }
+        
+        /* 当下拉内容显示后修改下拉按钮的背景颜色 */
+        .dropdown:hover .dropbtn {
+            background-color:none;
+        }
+        
+        
+         /* 鼠标移上去后修改下拉菜单链接颜色 */
+         .hamburger a:hover {
+             background-color: #f1f1f1
+            }
+        .C{
+            display: none;
+        }
+        .banxin{
+            width: 620px;
+        }
+        .biaoge1{
+            display: none;
+        } 
+        .biaoge2{
+            display: block;
+            margin-top: 90px;
+        }
+        .banxin div table{
+            position: relative;
+            width: 100%;
+        }
+        .date{
+            display: inline-block;
+            width: 81px;
+        }
+        tr .date{
+            vertical-align:top;
+        }
+        tr img{
+            vertical-align: middle;
+        }
+        button{
+            right: 0px;
+            border: 2px solid #2db5a3;
+            font-size: 14px;
+            color: #2db5a3;
+            background-color:rgb(248,248,248);
+            margin-top: -4px;
+            width: 80px;
+            height: 36px;
+            border-radius: 8px;
+        }
+        .btn btn-default dropdown-toggle{
+            width: 100%;
+        }
+        button a{
+            font-size: 16px;
+            color: #333;
+
+        }
+        .btn-group > .btn {
+            width: 660px;
+            height: 80px;
+            border-radius: 4px;
+        }
+        .dropdown-menu{
+            text-align: center;
+            width: 100%;
+        }
+        .dropdown-menu span {
+            margin-right: 70px;
+            padding: 0;
+        }
+        .btn-group button img {
+            position: static;
+            width: 40px;
+            margin-right: 10px;
+        }
+        .dropdown-menu p{
+            padding: 0 48px;
+            text-align: left;
+            text-indent: 2em;
+            border-top: 1px solid #999;
+            margin-top: 0px;
+            padding: 10px 0;
+        }
+       .dropdown-menu p a{
+            font-size: 14px;
+            color: #999;
+        }
+        .btn-group:nth-child(1){
+        margin-top: 30px;
+        }
+        .btn-group{
+        left: -20px;
+        margin-top: 20px;
+        }
+        .name1{
+        margin-top: 30px;
+        }
+        .date{
+        vertical-align: middle;
+       }
+       .dropdown-menu div{
+           padding: 0 20px;
+       }
+    
+}
