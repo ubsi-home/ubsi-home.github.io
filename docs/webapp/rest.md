@@ -22,7 +22,7 @@ WebApp的前端开发不在UBSI的讨论范围之内，可以根据实际情况�
 
 > 注意：
 >
-> * rewin.ubsi.rest依赖的SprintBoot版本是2.2.1.RELEASE
+> * rewin.ubsi.rest依赖的SprintBoot版本是2.2.6.RELEASE
 > * rewin.ubsi.rest已经依赖了rewin.ubsi.core，不必重复添加
 
 

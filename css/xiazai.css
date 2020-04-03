@@ -13,6 +13,9 @@ a{
 a:hover{
     text-decoration: none;
 }
+a:focus{
+    text-decoration: none;
+ }
 .banxin{
     width: 733px;
     margin: 0 auto;
@@ -74,9 +77,9 @@ a,img{border:0;}
     border-collapse: separate;
     border-spacing: 30px;
 }
-.biaoge2{
+/* .biaoge2{
     display: none;
-}
+} */
 .img,
 .second,
 .date{
@@ -107,6 +110,7 @@ a,img{border:0;}
 .date{
     font-size: 13px;
     color: #999;
+    font-weight: 400;
 }
 .gengduo{
     color:#fff;
@@ -123,12 +127,13 @@ a,img{border:0;}
     height:200px;
     padding:10px 0; */
      background-color:#5e6664;
+     margin-top: 210px;
 }
 .name01{
     /* height:46px; */
     /* width:100%; */
     /* padding:10px 0; */
-    margin-left:124.5px;
+    margin-left:124px;
 }
 .N1{
     height: 130px;
@@ -166,8 +171,8 @@ a,img{border:0;}
     vertical-align:-6px;
     margin-right: 10px;
 }
-
- .biaoge1 tr .img{
+/* 1按钮样式start */
+ /* .biaoge1 tr .img{
      width: 20px;
  }
  .biaoge1 tr img{
@@ -188,14 +193,14 @@ a,img{border:0;}
   }
   .dropdown-menu span{
       padding: 0 49px;
-  }
+  } */
   /* .dropdown-menu span .xiazai1{
       display: inline;
       font-size: 14px;
       color: #333;
       font-weight: 400;
   } */
-  .dropdown-menu p{
+  /* .dropdown-menu p{
     margin-top: 10px;
     padding: 0 10px;
 }
@@ -224,6 +229,86 @@ a,img{border:0;}
 .dropdown-menu li span>a:hover{
     color: #2db5a3;
    
+} */
+/* 按钮样式end */
+/* 2面板样式start */
+    .xiazaineirong{
+    margin-top: 100px;
+    /* padding-bottom: 100px; */
+}
+    .panel-heading img{
+    width: 40px;
+    vertical-align: top
+}
+    .panel-heading a{
+    font-size: 16px;
+    font-weight: 700;
+}
+.panel-heading{
+    width: 100%;  
+    height: auto;  
+    word-wrap:break-word;  
+    word-break:break-all;  
+    overflow: hidden; 
+}
+.banben{
+    display: inline-block;
+    font-size: 14px;
+    width: 160px;
+    font-weight: 400;
+    color: #666;
+    vertical-align: text-top;
+    margin-right: 20px;
+}
+.date{
+    vertical-align: text-top;
+    margin-right: 20px;
+}
+.panel-body a{
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    display: inline-block;
+    width: 500px;
+    display: inline-block;
+    text-align: justify;
+}
+.panel-body a:hover{
+    color: #2db5a3;
+}
+/* .panel-body div{
+    text-align: center;
+} */
+.panel-body .content{
+    float: right;
+}
+.panel-body .content span{
+    margin-right: 20px;
+    font-size: 14px;
+    color: #666;
+}
+.panel-body p{
+    color: #666;
+}
+.panel-body button{
+    display: none;
+}
+.panel-heading{
+    position: relative;
+}
+.panel-title a .mingcheng{
+    width: 310px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.panel-title a .mingcheng::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.xinxi{
+    float: right;
 }
  @media only screen and (max-width: 767px) {
     .Bg{ width: 100%; margin:0 auto }
@@ -284,7 +369,7 @@ a,img{border:0;}
         
         /* 容器 <div> - 需要定位下拉内容 */
         .dropdown {
-            float:right;
+            float: right;
             margin:30px 20px 0 0;
             display: inline-block;
         }
@@ -342,6 +427,7 @@ a,img{border:0;}
             background-color: #000;
             width:300px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            margin-top: 10px;
         }
         
         /* 下拉菜单的链接 */
@@ -353,7 +439,9 @@ a,img{border:0;}
         }
         
         /* 鼠标移上去后修改下拉菜单链接颜色 */
-        .dropdown-content a:hover {color: #2db5a3;}
+        .dropdown-content a:hover {
+            color: #2db5a3;
+        }
         
         /* 在鼠标移上去后显示下拉菜单 */
         .dropdown:hover .dropdown-content {
@@ -374,12 +462,9 @@ a,img{border:0;}
         .C{
             display: none;
         }
-        .banxin{
+        /* .banxin{
             width: 620px;
         }
-        .biaoge1{
-            display: none;
-        } 
         .biaoge2{
             display: block;
             margin-top: 90px;
@@ -463,5 +548,33 @@ a,img{border:0;}
        .dropdown-menu div{
            padding: 0 20px;
        }
-    
+    .banxin{
+        display: none;
+    } */
+    .banxin{
+        width: 620px;
+    }
+    .panel-title a .mingcheng {
+        width: 380px;
+    }
+    .panel-body a{
+    pointer-events:none;
+    font-weight: 400;
+    color: #2db5a3;
+    width: 390px;
+}
+    .panel-body button{
+    display: inline-block;
+    border: none;
+    background-color:#2db5a3;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin-left: 80px;
+    height: 30px;
+}
+.name1{
+    margin-top: 600px;
+}
 }
