@@ -56,7 +56,7 @@
                                 <span class="mingcheng">UBSI核心包</span>
                                 <div class="xinxi">
                                     <span class="banben">1.0.1</span>
-                                    <span class="date">2020-07-31</span>
+                                    <span class="date">2020-08-06</span>
                                 </div>
                             </a>
                         </div>
@@ -67,12 +67,12 @@
                                 <a
                                     href="rewin.ubsi.core-1.0.1-jar-with-dependencies.jar">rewin.ubsi.core-1.0.1-jar-with-dependencies.jar</a>
                                 <span class="content">
-                                    <span>11,712 KB</span>
-                                    <span>2020-07-31</span>
+                                    <span>11,713 KB</span>
+                                    <span>2020-08-06</span>
                                 </span>
                             </div>
                             <p>
-                                新增机制：在service stop时，清除相关的Dealing记录（防止有接口超时后，流控机制会阻止后续访问）
+                                在service stop时，新增了相关接口请求处理记录的清除机制(防止有接口超时后，容器会阻止后续访问)；@UService/@USFilter增加了两个属性，container指定依赖的容器的版本号，syslib指定需要加载到SystemClassLoader中的Jar包
                             </p>
                         </div>
                         <div class="panel-body">
