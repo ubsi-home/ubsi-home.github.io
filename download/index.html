@@ -65,14 +65,14 @@
                         <div class="panel-body">
                             <div>
                                 <a
-                                    href="rewin.ubsi.core-1.0.1-jar-with-dependencies.jar">rewin.ubsi.core-1.0.1-jar-with-dependencies.jar</a>
+                                    href="rewin.ubsi.core-2.0.0-jar-with-dependencies.jar">rewin.ubsi.core-2.0.0-jar-with-dependencies.jar</a>
                                 <span class="content">
-                                    <span>11,713 KB</span>
-                                    <span>2020-08-12</span>
+                                    <span>11,720 KB</span>
+                                    <span>2021-04-01</span>
                                 </span>
                             </div>
                             <p>
-                                在service stop时，新增了相关接口请求处理记录的清除机制(防止有接口超时后，容器会阻止后续访问)；@UService/@USFilter增加了两个属性，container指定依赖的容器的版本号，syslib指定需要加载到SystemClassLoader中的Jar包
+                                服务可以被声明为"单例"模式，在存在多个部署实例时，容器会控制只有1个实例处于运行状态，其他实例作为"后备"，当主实例失败后，会自动启动另外一个实例。
                             </p>
                         </div>
                         <div class="panel-body">
