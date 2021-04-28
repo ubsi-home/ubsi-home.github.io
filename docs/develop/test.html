@@ -633,6 +633,18 @@ public class DemoClient {
     }
 
 }
+</code></pre><blockquote>
+<p>--- since ubsi-core 2.0.1 ---</p>
+<p>&#x5982;&#x679C;&#x8981;&#x8BBF;&#x95EE;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x6709;&#x5F88;&#x957F;&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;&#xFF0C;&#x6784;&#x9020;&#x8BE5;&#x63A5;&#x53E3;&#x7684;&#x670D;&#x52A1;&#x8BF7;&#x6C42;&#x65F6;&#x4EE3;&#x7801;&#x4F1A;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x96BE;&#x4EE5;&#x7EF4;&#x62A4;&#xFF0C;&#x4ECE;ubsi-core 2.0.1&#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;Container&#x5728;&#x63A5;&#x6536;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;Header&#x7684;request_params&#x5C5E;&#x6027;&#x4E2D;&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x65F6;consumer&#x5728;&#x6784;&#x9020;&#x8BF7;&#x6C42;&#x65F6;&#x53EA;&#x9700;&#x8981;&#x6307;&#x5B9A;&quot;&#x63A5;&#x53E3;&quot;&#x540D;&#x5B57;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#xFF0C;&#x53C2;&#x6570;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;Map<string,object>&#x653E;&#x5230;Header&#x7684;request_params&#x5C5E;&#x6027;&#x4E0A;&#x5373;&#x53EF;&#x3002;request_params&#x5185;&#x7684;&#x5404;&#x4E2A;&#x5C5E;&#x6027;&#x5FC5;&#x987B;&#x662F;&#x8BE5;&quot;&#x63A5;&#x53E3;&quot;&#x6CE8;&#x89E3;&#x4E2D;&#x901A;&#x8FC7;@USParma&#x58F0;&#x660E;&#x7684;&#x53C2;&#x6570;&#x540D;&#x5B57;&#xFF0C;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</string,object></p>
+</blockquote>
+<pre><code>    // &#x6784;&#x9020;&#x670D;&#x52A1;&#x8BF7;&#x6C42;&#xFF0C;&#x6307;&#x5B9A;&#xFF1A;&quot;&#x670D;&#x52A1;&#x540D;&#x5B57;&quot;&#x3001;&quot;&#x63A5;&#x53E3;&#x540D;&#x5B57;&quot;
+    Context context = Context.request(&quot;ServiceName&quot;, &quot;EntryName&quot;);
+    Map&lt;String,Object&gt; params = new HashMap&lt;&gt;();
+    params.put(&quot;param1_name&quot;, param1_value);    // &#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x53C2;&#x6570;1
+    params.put(&quot;param2_name&quot;, param2_value);    // &#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x53C2;&#x6570;2
+    context.setHeader(Context.REQUEST_PARAMS, params);    // &#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;Header
+    // &#x5C06;&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x5230;&#x5FAE;&#x670D;&#x52A1;&#x6240;&#x5728;&#x7684;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#xFF08;&#x5730;&#x5740;,&#x7AEF;&#x53E3;&#xFF09;&#xFF0C;&#x5E76;&#x83B7;&#x5F97;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;
+    Object res = context.direct(&quot;localhost&quot;, 7112);
 </code></pre><p>&#x5728;&#x5B9E;&#x9645;&#x8BBF;&#x95EE;&#x4E4B;&#x524D;&#xFF0C;&#x5FC5;&#x987B;&#x5148;&#x4FDD;&#x8BC1;&#x5FAE;&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x52A0;&#x8F7D;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x4E2D;&#x3002;&#x5982;&#x4F55;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x5E76;&#x52A0;&#x8F7D;&#x5FAE;&#x670D;&#x52A1;&#x8BF7;&#x53C2;&#x89C1;<a href="deploy.html">&#x5FAE;&#x670D;&#x52A1;&#x7684;&#x53D1;&#x5E03;&#x53CA;&#x90E8;&#x7F72;</a>&#x3002;</p>
 <p>&#x4F46;&#x662F;&#x5728;&#x5FAE;&#x670D;&#x52A1;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x4E0D;&#x65AD;&#x542F;&#x505C;&#x670D;&#x52A1;&#x6765;&#x8FDB;&#x884C;&#x63A5;&#x53E3;&#x8C03;&#x8BD5;&#xFF0C;&#x4F1A;&#x4E25;&#x91CD;&#x5F71;&#x54CD;&#x5F00;&#x53D1;&#x6548;&#x7387;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5229;&#x7528;JUnit&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#x6765;&#x66F4;&#x9AD8;&#x6548;&#x7387;&#x5730;&#x8FDB;&#x884C;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x7684;&#x5F00;&#x53D1;&#x53CA;&#x6D4B;&#x8BD5;&#x3002;</p>
 <p>&#x4EE5;&#x524D;&#x9762;&#x7684;&quot;&#x8BBF;&#x95EE;&#x8BA1;&#x6570;&quot;CountService&#x4E3A;&#x4F8B;&#xFF0C;&#x7528;JUnit4&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF1A;</p>
@@ -802,7 +814,7 @@ Object res = context.call();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"访问及测试","level":"1.2.4","depth":2,"next":{"title":"日志处理","level":"1.2.5","depth":2,"path":"develop/log.md","ref":"develop/log.md","articles":[]},"previous":{"title":"DEMO示例","level":"1.2.3","depth":2,"path":"develop/demo.md","ref":"develop/demo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","splitter","mermaid-gb3","-sectionx","chapter-fold","back-to-top-button","hide-element"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"back-to-top-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"首页":"https://ubsi-home.github.io/"}},"gitbook":"*"},"file":{"path":"develop/test.md","mtime":"2020-03-19T03:34:17.110Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-01T06:35:56.264Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"访问及测试","level":"1.2.4","depth":2,"next":{"title":"日志处理","level":"1.2.5","depth":2,"path":"develop/log.md","ref":"develop/log.md","articles":[]},"previous":{"title":"DEMO示例","level":"1.2.3","depth":2,"path":"develop/demo.md","ref":"develop/demo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","splitter","mermaid-gb3","-sectionx","chapter-fold","back-to-top-button","hide-element","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"back-to-top-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"首页":"https://ubsi-home.github.io/"}},"gitbook":"*"},"file":{"path":"develop/test.md","mtime":"2021-04-28T05:44:45.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-28T05:39:48.125Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -838,6 +850,10 @@ Object res = context.call();
     
         
         <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
