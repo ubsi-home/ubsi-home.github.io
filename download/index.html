@@ -55,8 +55,8 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                 <span class="mingcheng">UBSI核心包</span>
                                 <div class="xinxi">
-                                    <span class="banben">2.1.2</span>
-                                    <span class="date">2021-12-02</span>
+                                    <span class="banben">2.3.0</span>
+                                    <span class="date">2022-02-25</span>
                                 </div>
                             </a>
                         </div>
@@ -65,14 +65,28 @@
                         <div class="panel-body">
                             <div>
                                 <a
-                                    href="rewin.ubsi.core-2.1.2-jar-with-dependencies.jar">rewin.ubsi.core-2.1.2-jar-with-dependencies.jar</a>
+                                    href="rewin.ubsi.core-2.3.0-jar-with-dependencies.jar">rewin.ubsi.core-2.3.0-jar-with-dependencies.jar</a>
                                 <span class="content">
-                                    <span>13,467 KB</span>
-                                    <span>2021-12-02</span>
+                                    <span>13,621 KB</span>
+                                    <span>2022-02-25</span>
                                 </span>
                             </div>
                             <p>
+								包含Container服务容器、Consumer访问组件以及若干工具。可以独立运行 - 启动服务容器实例；也可以引入到maven项目中 - 开发UBSI微服务或WebApp。<br>
 								----------------------------------------<br>
+								<b>2.3.0 @ 2022-02-20</b><br>
+								-- 增加了TCC模式分布式事务的处理机制（依赖rewin.ubsi.transaction事务管理服务）<br>
+								-- 增加了common.GlobalLock分布式全局锁<br>
+								-- Log日志的code字段增加了[PID]<br>
+								<b>2.2.2 @ 2022-01-20</b><br>
+								-- container增加了访问微服务/过滤器资源文件的接口，支持部署时资源文件的上传<br>
+								<b>2.2.1 @ 2022-01-10</b><br>
+								-- ScriptUtil增加了带有ServiceContext参数的构造函数，以便在微服务中使用脚本时能够保持链路跟踪<br>
+								-- rewin.ubsi.log.json增加了js_level配置项，指定JS脚本日志的输出级别，默认为"DEBUG"<br>
+								-- container在load微服务时，会增加"rewin.ubsi.modules/{serviceName}"目录到classpath中；ServiceContext增加了getResourceAsStream()方法，可以读取classpath中的资源文件<br>
+								-- 更新依赖的第三方Jar包到最新版本，如：netty-4.1.72.Final、jedis-3.7.1<br>
+								<b>2.2.0 @ 2021-12-30</b><br>
+								-- 增加了对slf4j接口的实现; rewin.ubsi.log.json增加了slf4j_level配置项，指定slf4j的日志输出级别，默认为"WARN"<br>
 								<b>2.1.2 @ 2021-12-02</b><br>
 								-- Container增强了对singleton服务实例的运行监控机制<br>
 								<b>2.1.1 @ 2021-11-15</b><br>
@@ -86,9 +100,9 @@
 								-- 优化了log日志的输出格式，增强可读性。<br>
                                 -- Container在接收请求时，可以从Header的request_params属性中获得请求参数，这时Consumer在构造请求时只需要指定"接口"名字，不需要指定参数，参数可以通过一个Map&lt;String,Object&gt;放到Header的request_params属性上。<br>
 								<b>2.0.0 @ 2021-04-19</b><br>
-                                服务可以被声明为"单例"模式，在存在多个部署实例时，容器会控制只有1个实例处于运行状态，其他实例作为"后备"，当主实例失败后，会自动启动另外一个实例。<br>
+                                -- 服务可以被声明为"单例"模式，在存在多个部署实例时，容器会控制只有1个实例处于运行状态，其他实例作为"后备"，当主实例失败后，会自动启动另外一个实例。<br>
 								<b>1.0.0 @ 2020-04-29</b><br>
-                                包含Container服务容器、Consumer访问组件以及若干工具。可以独立运行 - 启动服务容器实例；也可以引入到maven项目中 - 开发UBSI微服务或WebApp。
+								-- 首次发布
                             </p>
                         </div>
                     </div>
@@ -101,8 +115,8 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                                 <span class="mingcheng">命令行部署工具</span>
                                 <div class="xinxi">
-                                    <span class="banben">2.1.1</span>
-                                    <span class="date">2021-11-15</span>
+                                    <span class="banben">2.3.0</span>
+                                    <span class="date">2022-02-25</span>
                                 </div>
                             </a>
                         </h4>
@@ -111,14 +125,17 @@
                         <div class="panel-body">
                             <div>
                                 <a
-                                    href="rewin.service.ubsi.repo-2.1.1-jar-with-dependencies.jar">rewin.service.ubsi.repo-2.1.1-jar-with-dependencies.jar</a>
+                                    href="rewin.service.ubsi.repo-2.3.0-jar-with-dependencies.jar">rewin.service.ubsi.repo-2.3.0-jar-with-dependencies.jar</a>
                                 <span class="content">
-                                    <span>16,743 KB</span>
-                                    <span>2021-11-15</span>
+                                    <span>18,643 KB</span>
+                                    <span>2022-02-25</span>
                                 </span>
                             </div>
                             <p>
-                                微服务部署工具，可以从maven仓库（远程或本地）获取微服务的jar包及相关依赖，部署到指定的服务容器中。
+                                微服务部署工具，可以从maven仓库（远程或本地）获取微服务的jar包及相关依赖，部署到指定的服务容器中。<br>
+								----------------------------------------<br>
+								<b>2.3.0 @ 2022-02-20</b><br>
+								-- 支持部署时资源文件的上传
                             </p>
                         </div>
                     </div>
@@ -127,12 +144,12 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <img src="../img/down.png" alt="">
+                            <img src="../img/down2.png" alt="">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseRest">
-                                <span class="mingcheng">SpringBoot接口包</span>
+                                <span class="mingcheng">SpringBoot应用扩展接口</span>
                                 <div class="xinxi">
-                                    <span class="banben">2.1.1</span>
-                                    <span class="date">2021-11-23</span>
+                                    <span class="banben">2.3.0</span>
+                                    <span class="date">2022-02-25</span>
                                 </div>
                             </a>
                         </h4>
@@ -140,15 +157,14 @@
                     <div id="collapseRest" class="panel-collapse collapse">
                         <div class="panel-body">
                             <div>
-                                <a
-                                    href="rewin.ubsi.rest-2.1.1.jar">rewin.ubsi.rest-2.1.1.jar</a>
+                                <a href="rewin.ubsi.rest-2.3.0.jar">rewin.ubsi.rest-2.3.0.jar</a>
                                 <span class="content">
                                     <span>17 KB</span>
-                                    <span>2021-11-23</span>
+                                    <span>2022-02-25</span>
                                 </span>
                             </div>
                             <p>
-                                使SpringBoot2开发的WebApp能够接受ubsi-admin工具的监控或配置命令。
+                                使SpringBoot2开发的WebApp能够接受ubsi-admin工具的监控及配置
                             </p>
                         </div>
                     </div>
@@ -161,8 +177,8 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                                 <span class="mingcheng">API网关</span>
                                 <div class="xinxi">
-                                    <span class="banben">2.1.1</span>
-                                    <span class="date">2021-11-24</span>
+                                    <span class="banben">2.3.0</span>
+                                    <span class="date">2022-02-25</span>
                                 </div>
                             </a>
                         </h4>
@@ -170,10 +186,10 @@
                     <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body">
                             <div>
-                                <a href="rewin.rest.ubsi.gateway-2.1.1.jar">rewin.rest.ubsi.gateway-2.1.1.jar</a>
+                                <a href="rewin.rest.ubsi.gateway-2.3.0.jar">rewin.rest.ubsi.gateway-2.3.0.jar</a>
                                 <span class="content">
-                                    <span>47,694 KB</span>
-                                    <span>2021-11-24</span>
+                                    <span>44,608 KB</span>
+                                    <span>2022-02-25</span>
                                 </span>
                             </div>
                             <p>
@@ -190,8 +206,8 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseScript">
                                 <span class="mingcheng">Rest脚本服务接口</span>
                                 <div class="xinxi">
-                                    <span class="banben">1.0.1</span>
-                                    <span class="date">2021-11-24</span>
+                                    <span class="banben">1.0.4</span>
+                                    <span class="date">2022-02-25</span>
                                 </div>
                             </a>
                         </h4>
@@ -199,44 +215,14 @@
                     <div id="collapseScript" class="panel-collapse collapse">
                         <div class="panel-body">
                             <div>
-                                <a href="rewin.rest.ubsi.script-1.0.1.jar">rewin.rest.ubsi.script-1.0.1.jar</a>
+                                <a href="rewin.rest.ubsi.script-1.0.4.jar">rewin.rest.ubsi.script-1.0.4.jar</a>
                                 <span class="content">
-                                    <span>47,672 KB</span>
-                                    <span>2021-11-24</span>
+                                    <span>44,591 KB</span>
+                                    <span>2022-02-25</span>
                                 </span>
                             </div>
                             <p>
                                 支持利用JavaScript脚本快速实现Restful-API，支持基于角色的权限控制。（依赖微服务rewin.ubsi.script）
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <img src="../img/down3.png" alt="">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTools">
-                                <span class="mingcheng">命令行工具</span>
-                                <div class="xinxi">
-                                    <span class="banben">1.0.1</span>
-                                    <span class="date">2021-09-28</span>
-                                </div>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTools" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <div>
-                                <a
-                                    href="rewin.tools.common-1.0.1-jar-with-dependencies.jar">rewin.tools.common-1.0.1-jar-with-dependencies.jar</a>
-                                <span class="content">
-                                    <span>11,742 KB</span>
-                                    <span>2021-09-28</span>
-                                </span>
-                            </div>
-                            <p>
-                                常用的命令行工具，包括了mongodb数据导入/导出等。
                             </p>
                         </div>
                     </div>
@@ -294,7 +280,7 @@
                                 </span>
                             </div>
                             <p>
-                                UBSI WebAdmin的前端页面，需要解压到Web Server的页面目录中。（请与我们联系）
+                                UBSI WebAdmin治理工具，需要解压到Web Server的页面目录中。（请与我们联系）
                             </p>
                         </div>
                     </div>
