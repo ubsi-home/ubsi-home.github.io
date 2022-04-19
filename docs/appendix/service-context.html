@@ -1,0 +1,1586 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Service Context API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="data-type.html" />
+    
+    
+    <link rel="prev" href="annotation/transaction.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://ubsi-home.github.io/" target="_blank" class="custom-link">首页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../develop/readme.html">
+            
+                <a href="../develop/readme.html">
+            
+                    
+                    微服务开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../develop/environment.html">
+            
+                <a href="../develop/environment.html">
+            
+                    
+                    开发环境准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../develop/project.html">
+            
+                <a href="../develop/project.html">
+            
+                    
+                    开启Java Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../develop/entry.html">
+            
+                <a href="../develop/entry.html">
+            
+                    
+                    实现业务接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../develop/service.html">
+            
+                <a href="../develop/service.html">
+            
+                    
+                    实现配置管理接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../develop/unit-test.html">
+            
+                <a href="../develop/unit-test.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../develop/deploy.html">
+            
+                <a href="../develop/deploy.html">
+            
+                    
+                    服务部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../develop/consumer.html">
+            
+                <a href="../develop/consumer.html">
+            
+                    
+                    观察及访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../filter/readme.html">
+            
+                <a href="../filter/readme.html">
+            
+                    
+                    过滤器开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../filter/project.html">
+            
+                <a href="../filter/project.html">
+            
+                    
+                    过滤器Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../filter/container.html">
+            
+                <a href="../filter/container.html">
+            
+                    
+                    容器端过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../filter/consumer.html">
+            
+                <a href="../filter/consumer.html">
+            
+                    
+                    访问端过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../filter/test.html">
+            
+                <a href="../filter/test.html">
+            
+                    
+                    部署及测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../core/readme.html">
+            
+                <a href="../core/readme.html">
+            
+                    
+                    核心组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../core/container.html">
+            
+                <a href="../core/container.html">
+            
+                    
+                    Container服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../core/consumer.html">
+            
+                <a href="../core/consumer.html">
+            
+                    
+                    Consumer组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../core/logger.html">
+            
+                <a href="../core/logger.html">
+            
+                    
+                    分布式日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../transaction/readme.html">
+            
+                <a href="../transaction/readme.html">
+            
+                    
+                    分布式事务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../transaction/annotation.html">
+            
+                <a href="../transaction/annotation.html">
+            
+                    
+                    事务注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../transaction/demo.html">
+            
+                <a href="../transaction/demo.html">
+            
+                    
+                    事务示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../gateway/readme.html">
+            
+                <a href="../gateway/readme.html">
+            
+                    
+                    服务网关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../admin/readme.html">
+            
+                <a href="../admin/readme.html">
+            
+                    
+                    治理工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../admin/monitor.html">
+            
+                <a href="../admin/monitor.html">
+            
+                    
+                    运行监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../admin/repo.html">
+            
+                <a href="../admin/repo.html">
+            
+                    
+                    服务仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../admin/test.html">
+            
+                <a href="../admin/test.html">
+            
+                    
+                    测试管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../admin/log.html">
+            
+                <a href="../admin/log.html">
+            
+                    
+                    日志分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../admin/gateway.html">
+            
+                <a href="../admin/gateway.html">
+            
+                    
+                    网关管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../admin/schedule.html">
+            
+                <a href="../admin/schedule.html">
+            
+                    
+                    任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../admin/script.html">
+            
+                <a href="../admin/script.html">
+            
+                    
+                    Web服务脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../admin/eventflow.html">
+            
+                <a href="../admin/eventflow.html">
+            
+                    
+                    服务流程编排
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../admin/transaction.html">
+            
+                <a href="../admin/transaction.html">
+            
+                    
+                    事务监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../basis/readme.html">
+            
+                <a href="../basis/readme.html">
+            
+                    
+                    基础微服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../basis/admin.html">
+            
+                <a href="../basis/admin.html">
+            
+                    
+                    监控聚合服务 - rewin.ubsi.admin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../basis/log.html">
+            
+                <a href="../basis/log.html">
+            
+                    
+                    日志服务 - rewin.ubsi.logger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../basis/repo.html">
+            
+                <a href="../basis/repo.html">
+            
+                    
+                    服务仓库 - rewin.ubsi.repo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../basis/test.html">
+            
+                <a href="../basis/test.html">
+            
+                    
+                    测试管理 - rewin.ubsi.tester
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../basis/gateway.html">
+            
+                <a href="../basis/gateway.html">
+            
+                    
+                    网关配置管理 - rewin.ubsi.gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../basis/schedule.html">
+            
+                <a href="../basis/schedule.html">
+            
+                    
+                    任务调度器 - rewin.ubsi.scheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../basis/eventflow.html">
+            
+                <a href="../basis/eventflow.html">
+            
+                    
+                    流程引擎 - rewin.ubsi.eventflow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../basis/script.html">
+            
+                <a href="../basis/script.html">
+            
+                    
+                    脚本管理 - rewin.ubsi.script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../basis/transaction.html">
+            
+                <a href="../basis/transaction.html">
+            
+                    
+                    事务管理器 - rewin.ubsi.transaction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../basis/favor.html">
+            
+                <a href="../basis/favor.html">
+            
+                    
+                    参数管理 - rewin.common.favor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../basis/dict.html">
+            
+                <a href="../basis/dict.html">
+            
+                    
+                    数据字典 - rewin.common.dict
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../basis/info.html">
+            
+                <a href="../basis/info.html">
+            
+                    
+                    信息管理 - rewin.common.info
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../basis/user.html">
+            
+                <a href="../basis/user.html">
+            
+                    
+                    用户管理 - rewin.common.user
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../basis/auth.html">
+            
+                <a href="../basis/auth.html">
+            
+                    
+                    用户认证 - rewin.user.auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../basis/session.html">
+            
+                <a href="../basis/session.html">
+            
+                    
+                    用户会话管理 - rewin.user.session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="../basis/shell.html">
+            
+                <a href="../basis/shell.html">
+            
+                    
+                    系统脚本执行器 - rewin.common.shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="../basis/approval.html">
+            
+                <a href="../basis/approval.html">
+            
+                    
+                    审批规则管理 - rewin.common.approval
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../webapp/readme.html">
+            
+                <a href="../webapp/readme.html">
+            
+                    
+                    Web应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../webapp/rest.html">
+            
+                <a href="../webapp/rest.html">
+            
+                    
+                    REST治理工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../webapp/script.html">
+            
+                <a href="../webapp/script.html">
+            
+                    
+                    WEB脚本服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="annotation.html">
+            
+                <a href="annotation.html">
+            
+                    
+                    UBSI注解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="annotation/service.html">
+            
+                <a href="annotation/service.html">
+            
+                    
+                    服务注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="annotation/entry.html">
+            
+                <a href="annotation/entry.html">
+            
+                    
+                    接口注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="annotation/data.html">
+            
+                <a href="annotation/data.html">
+            
+                    
+                    数据注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="annotation/transaction.html">
+            
+                <a href="annotation/transaction.html">
+            
+                    
+                    事务注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.2" data-path="service-context.html">
+            
+                <a href="service-context.html">
+            
+                    
+                    Service Context API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="data-type.html">
+            
+                <a href="data-type.html">
+            
+                    
+                    数据类型及编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="data-codec.html">
+            
+                <a href="data-codec.html">
+            
+                    
+                    数据类型转换API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="context.html">
+            
+                <a href="context.html">
+            
+                    
+                    Consumer Context API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="error-code.html">
+            
+                <a href="error-code.html">
+            
+                    
+                    错误代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="cli.html">
+            
+                <a href="cli.html">
+            
+                    
+                    命令行工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="js-api.html">
+            
+                <a href="js-api.html">
+            
+                    
+                    JS脚本API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="redis.html">
+            
+                <a href="redis.html">
+            
+                    
+                    Redis消息事件API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="crypto.html">
+            
+                <a href="crypto.html">
+            
+                    
+                    国密算法API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Service Context API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="rewinubsicontainerservicecontext">rewin.ubsi.container.ServiceContext</h1>
+<hr>
+<h3 id="&#x6784;&#x9020;&#x51FD;&#x6570;">&#x6784;&#x9020;&#x51FD;&#x6570;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ServiceContext</span><span class="hljs-params">(String name)</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>name - &#x5FAE;&#x670D;&#x52A1;&#x540D;&#x5B57;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x653E;&#x76EE;&#x5F55;">&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x653E;&#x76EE;&#x5F55;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getLocalPath</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x5FAE;&#x670D;&#x52A1;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x672C;&#x5730;&#x8DEF;&#x5F84;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x7684;&#x8D44;&#x6E90;&#x6587;&#x4EF6;">&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x7684;&#x8D44;&#x6E90;&#x6587;&#x4EF6;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> InputStream <span class="hljs-title">getResourceAsStream</span><span class="hljs-params">(String filename)</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x540D;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x8F93;&#x5165;&#x6D41;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x8BBF;&#x95EE;&#x8005;&#x7684;&#x7F51;&#x7EDC;&#x5730;&#x5740;">&#x83B7;&#x5F97;&#x8BBF;&#x95EE;&#x8005;&#x7684;&#x7F51;&#x7EDC;&#x5730;&#x5740;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> InetSocketAddress <span class="hljs-title">getConsumerAddress</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x8BBF;&#x95EE;&#x8005;&#x7684;&#x7F51;&#x7EDC;&#x5730;&#x5740;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x8BF7;&#x6C42;id">&#x83B7;&#x5F97;&#x8BF7;&#x6C42;ID</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getRequestID</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x8BF7;&#x6C42;ID</li>
+</ul>
+<h3 id="&#x83B7;&#x53D6;&#x8BF7;&#x6C42;&#x7684;header&#x6570;&#x636E;&#x9879;">&#x83B7;&#x53D6;&#x8BF7;&#x6C42;&#x7684;Header&#x6570;&#x636E;&#x9879;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">getHeader</span><span class="hljs-params">(String key)</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>key - &#x6570;&#x636E;&#x9879;&#x7684;&#x540D;&#x5B57;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x6570;&#x636E;&#x9879;&#x7684;&#x503C;</li>
+</ul>
+<h3 id="&#x83B7;&#x53D6;&#x8BF7;&#x6C42;&#x7684;header">&#x83B7;&#x53D6;&#x8BF7;&#x6C42;&#x7684;Header</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> Map&lt;String,Object&gt; <span class="hljs-title">getHeader</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x8BF7;&#x6C42;&#x7684;Header</li>
+</ul>
+<h3 id="&#x4FEE;&#x6539;&#x8BF7;&#x6C42;header&#x7684;&#x6570;&#x636E;&#x9879;">&#x4FEE;&#x6539;&#x8BF7;&#x6C42;Header&#x7684;&#x6570;&#x636E;&#x9879;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setHeader</span><span class="hljs-params">(String key, Object value)</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>key - &#x6570;&#x636E;&#x9879;&#x7684;&#x540D;&#x5B57;</li>
+<li>value - &#x6570;&#x636E;&#x9879;&#x7684;&#x503C;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x540D;&#x5B57;">&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x540D;&#x5B57;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getServiceName</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x5FAE;&#x670D;&#x52A1;&#x5B9E;&#x9645;&#x90E8;&#x7F72;&#x7684;&#x670D;&#x52A1;&#x540D;&#x5B57;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x5FAE;&#x670D;&#x52A1;&#x5728;&#x90E8;&#x7F72;&#x65F6;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x540D;&#x5B57;&#xFF0C;&#x672A;&#x5FC5;&#x4F7F;&#x7528;@UService&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x8FD9;&#x79CD;&#x673A;&#x5236;&#x4F7F;&#x5F97;&#x540C;&#x4E00;&#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#x7684;class&#x53EF;&#x4EE5;&#x90E8;&#x7F72;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x540D;&#x5B57;&#x3002;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x7684;&#x72B6;&#x6001;">&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x7684;&#x72B6;&#x6001;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getServiceStatus</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x670D;&#x52A1;&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;0:&#x672A;&#x542F;&#x52A8;&#xFF0C;1:&#x8FD0;&#x884C;&#x4E2D;&#xFF0C;-1:&#x6682;&#x505C;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x7684;&#x63A5;&#x53E3;&#x540D;&#x5B57;">&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x7684;&#x63A5;&#x53E3;&#x540D;&#x5B57;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getEntryName</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x8BF7;&#x6C42;&#x7684;&#x63A5;&#x53E3;&#x540D;&#x5B57;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x7684;&#x6CE8;&#x89E3;">&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x7684;&#x6CE8;&#x89E3;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> USEntry <span class="hljs-title">getEntryAnnotation</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x7684;&#x6CE8;&#x89E3;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x5BB9;&#x5668;id">&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x5BB9;&#x5668;ID</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getContainerId</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x670D;&#x52A1;&#x5BB9;&#x5668;ID&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&quot;host#port&quot;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x7684;&#x7248;&#x672C;">&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x7684;&#x7248;&#x672C;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getContainerVersion</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;&quot;1.2.3&quot; =&gt; 1002003&#xFF0C;&#x7248;&#x672C;&#x5206;3&#x6BB5;&#xFF0C;&#x6BCF;&#x6BB5;&#x5360;3&#x4E2A;&#x6574;&#x6570;&#x4F4D;&#xFF08;&#x53D6;&#x503C;&#xFF1A;0~999&#xFF09;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x7684;&#x53D1;&#x884C;&#x72B6;&#x6001;">&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x7684;&#x53D1;&#x884C;&#x72B6;&#x6001;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">getContainerRelease</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x7684;&#x53D1;&#x884C;&#x72B6;&#x6001;&#xFF1A;&#x662F;&#x5426;Release</li>
+</ul>
+<h3 id="&#x68C0;&#x67E5;container&#x662F;&#x5426;&#x5F00;&#x59CB;&#x670D;&#x52A1;">&#x68C0;&#x67E5;Container&#x662F;&#x5426;&#x5F00;&#x59CB;&#x670D;&#x52A1;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isContainerReady</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x8FDB;&#x5165;&#x6B63;&#x5E38;&#x670D;&#x52A1;&#x72B6;&#x6001;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684;&#x6570;&#x91CF;">&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684;&#x6570;&#x91CF;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getParamCount</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684;&#x6570;&#x91CF;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684;&#x503C;">&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684;&#x503C;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">getParam</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>index - &#x53C2;&#x6570;&#x7684;&#x5E8F;&#x53F7;&#xFF0C;&#x4ECE;0&#x5F00;&#x59CB;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684;&#x503C;</li>
+</ul>
+<h3 id="&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setParam</span><span class="hljs-params">(Object... o)</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>o - &#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x7684;&#x6807;&#x5FD7;">&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x7684;&#x6807;&#x5FD7;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">byte</span> <span class="hljs-title">getRequestFlag</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x6309;&#x4F4D;&#x8868;&#x793A;&#x7684;&#x8BF7;&#x6C42;&#x6807;&#x5FD7;&#xFF0C;0x01&#xFF1A;&#x662F;&#x5426;&#x4E22;&#x5F03;&#x5904;&#x7406;&#x7ED3;&#x679C;&#xFF0C;0x02&#xFF1A;&#x662F;&#x5426;&#x901A;&#x8FC7;&#x5E7F;&#x64AD;&#x6D88;&#x606F;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;0x80&#xFF1A;&#x662F;&#x5426;&#x4EA7;&#x751F;&#x8BF7;&#x6C42;&#x7684;&#x8DDF;&#x8E2A;&#x65E5;&#x5FD7;</li>
+</ul>
+<h3 id="&#x6682;&#x505C;&#x670D;&#x52A1;">&#x6682;&#x505C;&#x670D;&#x52A1;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pause</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<h3 id="&#x91CD;&#x542F;&#x670D;&#x52A1;">&#x91CD;&#x542F;&#x670D;&#x52A1;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">restart</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x5904;&#x7406;&#x6570;&#x91CF;">&#x83B7;&#x5F97;&#x5904;&#x7406;&#x6570;&#x91CF;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">long</span>[] getStatistics(String service, String entry);
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>service - &#x670D;&#x52A1;&#x540D;&#x5B57;</li>
+<li>entry - &#x63A5;&#x53E3;&#x540D;&#x5B57;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x5904;&#x7406;&#x6570;&#x91CF;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;[ &#x5904;&#x7406;&#x7684;&#x8BF7;&#x6C42;&#x603B;&#x91CF;&#xFF0C;&#x5904;&#x7406;&#x5931;&#x8D25;&#x7684;&#x603B;&#x91CF; ]</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x6570;&#x91CF;&#x4E2D;&#x4E0D;&#x5305;&#x542B;&quot;&#x5F85;&#x5904;&#x7406;&quot;&#x6216;&quot;&#x5904;&#x7406;&#x4E2D;&quot;&#x7684;&#x8BF7;&#x6C42;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x5404;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x5904;&#x7406;&#x6570;&#x91CF;">&#x83B7;&#x5F97;&#x5404;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x5904;&#x7406;&#x6570;&#x91CF;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> Map&lt;String, <span class="hljs-keyword">long</span>[]&gt; getStatistics(String service);
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>service - &#x670D;&#x52A1;&#x540D;&#x5B57;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x5404;&#x63A5;&#x53E3;&#x7684;&#x5904;&#x7406;&#x6570;&#x91CF;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;{ &quot;&#x63A5;&#x53E3;&#x540D;&#x5B57;&quot; : [ &#x5904;&#x7406;&#x7684;&#x8BF7;&#x6C42;&#x603B;&#x91CF;&#xFF0C;&#x5904;&#x7406;&#x5931;&#x8D25;&#x7684;&#x603B;&#x91CF; ] }</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x6240;&#x6709;&#x670D;&#x52A1;&#x7684;&#x5904;&#x7406;&#x6570;&#x91CF;">&#x83B7;&#x5F97;&#x6240;&#x6709;&#x670D;&#x52A1;&#x7684;&#x5904;&#x7406;&#x6570;&#x91CF;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> Map&lt;String, Map&lt;String, <span class="hljs-keyword">long</span>[]&gt;&gt; getStatistics();
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x6240;&#x6709;&#x670D;&#x52A1;&#x7684;&#x5904;&#x7406;&#x6570;&#x91CF;&#xFF0C;&#x683C;&#x5F0F;&#xFF1A;{ &quot;&#x670D;&#x52A1;&#x540D;&#x5B57;&quot; : { &quot;&#x63A5;&#x53E3;&#x540D;&#x5B57;&quot; : [ &#x5904;&#x7406;&#x7684;&#x8BF7;&#x6C42;&#x603B;&#x91CF;&#xFF0C;&#x5904;&#x7406;&#x5931;&#x8D25;&#x7684;&#x603B;&#x91CF; ] } }</li>
+</ul>
+<h3 id="&#x8BBE;&#x7F6E;&#x6210;&#x529F;&#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;">&#x8BBE;&#x7F6E;&#x6210;&#x529F;&#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setResultData</span><span class="hljs-params">(Object data)</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>data - &#x5904;&#x7406;&#x7ED3;&#x679C;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x6B64;&#x63A5;&#x53E3;&#x901A;&#x5E38;&#x4F1A;&#x5728;&#x5BB9;&#x5668;&#x8FC7;&#x6EE4;&#x5668;@USFilter&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x8BE6;&#x89C1; <a href="annotation/service.html">@USFilter&#x7684;&#x8BF4;&#x660E;</a></li>
+</ul>
+<h3 id="&#x8BBE;&#x7F6E;&#x9519;&#x8BEF;&#x7ED3;&#x679C;">&#x8BBE;&#x7F6E;&#x9519;&#x8BEF;&#x7ED3;&#x679C;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setResultError</span><span class="hljs-params">(String msg)</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>msg - &#x9519;&#x8BEF;&#x4FE1;&#x606F;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<h3 id="&#x662F;&#x5426;&#x6709;&#x5904;&#x7406;&#x7ED3;&#x679C;">&#x662F;&#x5426;&#x6709;&#x5904;&#x7406;&#x7ED3;&#x679C;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">hasResult</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5904;&#x7406;&#x5B8C;&#x6210; &#x6216; &#x8BBE;&#x7F6E;&#x4E86;&#x5904;&#x7406;&#x7ED3;&#x679C;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x7ED3;&#x679C;&#x4EE3;&#x7801;">&#x83B7;&#x5F97;&#x7ED3;&#x679C;&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getResultCode</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x7ED3;&#x679C;&#x4EE3;&#x7801;&#xFF0C;ErrorCode.OK&#xFF08;0&#xFF09;&#x8868;&#x793A;&#x6210;&#x529F;</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x7ED3;&#x679C;&#x6570;&#x636E;">&#x83B7;&#x5F97;&#x7ED3;&#x679C;&#x6570;&#x636E;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">getResultData</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x7ED3;&#x679C;&#x6570;&#x636E;&#xFF0C;&#x5BF9;&#x4E8E;void&#x7C7B;&#x578B;&#x7684;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x4E3A;null</li>
+</ul>
+<h3 id="&#x8BF7;&#x6C42;&#x662F;&#x5426;&#x88AB;&#x8F6C;&#x53D1;&#x5904;&#x7406;">&#x8BF7;&#x6C42;&#x662F;&#x5426;&#x88AB;&#x8F6C;&#x53D1;&#x5904;&#x7406;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isForwarded</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>&#x662F;&#x5426;&#x88AB;&#x8F6C;&#x53D1;</li>
+</ul>
+<h3 id="&#x521B;&#x5EFA;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;">&#x521B;&#x5EFA;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> Context <span class="hljs-title">request</span><span class="hljs-params">(String service, Object... entryAndParams)</span> <span class="hljs-keyword">throws</span> Exception</span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>service - &#x670D;&#x52A1;&#x540D;&#x5B57;</li>
+<li>entryAndParams - &#x63A5;&#x53E3;&#x540D;&#x5B57;&#x53CA;&#x8BF7;&#x6C42;&#x53C2;&#x6570;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>rewin.ubsi.consumer.Context&#x5BF9;&#x8C61;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x5728;&#x5FAE;&#x670D;&#x52A1;&#x4E2D;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;ServiceContext&#x7684;request()&#x800C;&#x4E0D;&#x662F;Context.request()&#x6765;&#x521B;&#x5EFA;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#xFF1A;<ul>
+<li>&#x6B63;&#x786E;&#x7684;&#x670D;&#x52A1;&#x4F9D;&#x8D56;</li>
+<li>&#x6301;&#x7EED;&#x7684;&#x8BF7;&#x6C42;&#x94FE;&#x8DEF;&#x8DDF;&#x8E2A;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x83B7;&#x5F97;&#x65E5;&#x5FD7;&#x5BF9;&#x8C61;">&#x83B7;&#x5F97;&#x65E5;&#x5FD7;&#x5BF9;&#x8C61;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> Logger <span class="hljs-title">getLogger</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x65E0;</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#xFF1A;</p>
+<ul>
+<li>rewin.ubsi.consumer.Logger&#x5BF9;&#x8C61;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="annotation/transaction.html" class="navigation navigation-prev " aria-label="Previous page: 事务注解">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="data-type.html" class="navigation navigation-next " aria-label="Next page: 数据类型及编码">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Service Context API","level":"1.10.2","depth":2,"next":{"title":"数据类型及编码","level":"1.10.3","depth":2,"path":"appendix/data-type.md","ref":"appendix/data-type.md","articles":[]},"previous":{"title":"事务注解","level":"1.10.1.4","depth":3,"path":"appendix/annotation/transaction.md","ref":"appendix/annotation/transaction.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","splitter","mermaid-gb3","-sectionx","chapter-fold","back-to-top-button","hide-element","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"back-to-top-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"首页":"https://ubsi-home.github.io/"}},"gitbook":"*"},"file":{"path":"appendix/service-context.md","mtime":"2022-04-15T05:41:36.110Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-19T07:40:50.479Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
