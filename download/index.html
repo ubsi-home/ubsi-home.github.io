@@ -53,15 +53,37 @@
                         <div class="panel-title">
                             <img src="../img/down.png" alt="">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                <span class="mingcheng">UBSI核心包</span>
+                                <span class="mingcheng">UBSI核心包（正式版）</span>
                                 <div class="xinxi">
-                                    <span class="banben">2.3.0</span>
-                                    <span class="date">2022-04-21</span>
+                                    <span class="banben">2.3.1</span>
+                                    <span class="date">2022-08-22</span>
                                 </div>
                             </a>
                         </div>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+							包含Container服务容器、Consumer访问组件以及若干工具。可以独立运行 - 启动服务容器实例；也可以引入到maven项目中 - 开发UBSI微服务或WebApp。
+						</div>
+                        <div class="panel-body">
+                            <div>
+                                <a
+                                    href="rewin.ubsi.core-2.3.1-jar-with-dependencies.jar">rewin.ubsi.core-2.3.1-jar-with-dependencies.jar</a>
+                                <span class="content">
+                                    <span>13,624 KB</span>
+                                    <span>2022-08-22</span>
+                                </span>
+                            </div>
+                            <p>
+								----------------------------------------<br>
+								<b>2.3.1 @ 2022-08-09</b><br>
+								-- 增加了单例服务切换时的日志输出<br>
+								-- 优化了Service.FlushRegister的广播刷新机制<br>
+								-- 优化了Stress压力测试工具<br>
+								-- 修复了socket被动关闭后netty内存泄露问题<br>
+								-- 优化了ScriptUtil脚本工具的日志输出<br>
+                            </p>
+                        </div>
                         <div class="panel-body">
                             <div>
                                 <a
@@ -72,7 +94,6 @@
                                 </span>
                             </div>
                             <p>
-								包含Container服务容器、Consumer访问组件以及若干工具。可以独立运行 - 启动服务容器实例；也可以引入到maven项目中 - 开发UBSI微服务或WebApp。<br>
 								----------------------------------------<br>
 								<b>2.3.0 @ 2022-02-20</b><br>
 								-- 增加了TCC模式分布式事务的处理机制（依赖rewin.ubsi.transaction事务管理服务）<br>
@@ -115,13 +136,33 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                                 <span class="mingcheng">命令行部署工具</span>
                                 <div class="xinxi">
-                                    <span class="banben">2.3.0</span>
-                                    <span class="date">2022-04-18</span>
+                                    <span class="banben">2.3.1</span>
+                                    <span class="date">2022-08-22</span>
                                 </div>
                             </a>
                         </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+							微服务部署工具，可以从maven仓库（远程或本地）获取微服务的jar包及相关依赖，部署到指定的服务容器中。
+						</div>
+                        <div class="panel-body">
+                            <div>
+                                <a
+                                    href="rewin.service.ubsi.repo-2.3.1-jar-with-dependencies.jar">rewin.service.ubsi.repo-2.3.1-jar-with-dependencies.jar</a>
+                                <span class="content">
+                                    <span>18,646 KB</span>
+                                    <span>2022-08-22</span>
+                                </span>
+                            </div>
+                            <p>
+								----------------------------------------<br>
+								<b>2.3.1 @ 2022-07-26</b><br>
+								-- 增加了服务依赖关系的反查接口listDepends()<br>
+								-- 依赖rewin.ubsi.core-2.3.1<br>
+								-- 支持部署到ubsi-core-ce社区版容器<br>
+                            </p>
+                        </div>
                         <div class="panel-body">
                             <div>
                                 <a
@@ -132,7 +173,6 @@
                                 </span>
                             </div>
                             <p>
-                                微服务部署工具，可以从maven仓库（远程或本地）获取微服务的jar包及相关依赖，部署到指定的服务容器中。<br>
 								----------------------------------------<br>
 								<b>2.3.0 @ 2022-02-20</b><br>
 								-- 支持部署时资源文件的上传
