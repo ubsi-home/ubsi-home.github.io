@@ -55,8 +55,8 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                 <span class="mingcheng">UBSI核心包（正式版）</span>
                                 <div class="xinxi">
-                                    <span class="banben">2.3.1</span>
-                                    <span class="date">2022-08-22</span>
+                                    <span class="banben">2.3.2</span>
+                                    <span class="date">2022-10-28</span>
                                 </div>
                             </a>
                         </div>
@@ -65,6 +65,31 @@
                         <div class="panel-body">
 							包含Container服务容器、Consumer访问组件以及若干工具。可以独立运行 - 启动服务容器实例；也可以引入到maven项目中 - 开发UBSI微服务或WebApp。
 						</div>
+                        <div class="panel-body">
+                            <div>
+                                <a
+                                    href="rewin.ubsi.core-2.3.2-jar-with-dependencies.jar">rewin.ubsi.core-2.3.2-jar-with-dependencies.jar</a>
+                                <span class="content">
+                                    <span>13,632 KB</span>
+                                    <span>2022-10-28</span>
+                                </span>
+                            </div>
+                            <p>
+								----------------------------------------<br>
+								<b>2.3.2 @ 2022-09-02</b><br>
+								-- consumer.Context增加了TargetContainer/TargetChannel属性<br>
+								-- cli.Console的"service"命令修改为"modules"，可列出微服务及过滤器<br>
+								-- 优化了容器forward的机制，避免出现循环转发<br>
+							    -- 采用独立线程处理controller的请求<br>
+								-- controller运行信息增加了redis连接/心跳时间、TOP信息等<br>
+								-- 修改了请求Header中参数的KEY<br>
+								-- @USParam注解增加了defaultValue属性<br>
+								-- 增加了返回结果的Tailer数据；cli.Console/ScriptUtil增加了tailer命令<br>
+							    -- 增加了静态/动态路由算法中的"补偿"机制<br>
+								-- 修改了获取容器注册地址的方法<br>
+								-- Controller的uninstall()增加了返回值<br>
+                            </p>
+                        </div>
                         <div class="panel-body">
                             <div>
                                 <a
@@ -137,8 +162,8 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                                 <span class="mingcheng">命令行部署工具</span>
                                 <div class="xinxi">
-                                    <span class="banben">2.3.1</span>
-                                    <span class="date">2022-08-22</span>
+                                    <span class="banben">2.3.2</span>
+                                    <span class="date">2022-10-28</span>
                                 </div>
                             </a>
                         </h4>
@@ -147,6 +172,23 @@
                         <div class="panel-body">
 							微服务部署工具，可以从maven仓库（远程或本地）获取微服务的jar包及相关依赖，部署到指定的服务容器中。
 						</div>
+                        <div class="panel-body">
+                            <div>
+                                <a
+                                    href="rewin.service.ubsi.repo-2.3.2-jar-with-dependencies.jar">rewin.service.ubsi.repo-2.3.2-jar-with-dependencies.jar</a>
+                                <span class="content">
+                                    <span>18,654 KB</span>
+                                    <span>2022-10-28</span>
+                                </span>
+                            </div>
+                            <p>
+								----------------------------------------<br>
+								<b>2.3.2 @ 2022-09-20</b><br>
+								-- 依赖rewin.ubsi.core-2.3.2<br>
+								-- 调整了数据表jar的索引<br>
+								-- 增加了uninstall返回结果的检查<br>
+                            </p>
+                        </div>
                         <div class="panel-body">
                             <div>
                                 <a
@@ -189,13 +231,32 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                                 <span class="mingcheng">API网关</span>
                                 <div class="xinxi">
-                                    <span class="banben">2.3.0</span>
-                                    <span class="date">2022-04-06</span>
+                                    <span class="banben">2.3.2</span>
+                                    <span class="date">2022-10-28</span>
                                 </div>
                             </a>
                         </h4>
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+							独立运行的API网关，提供Restful-API，为其他应用转发微服务请求。（依赖微服务rewin.ubsi.gateway）
+						</div>
+                        <div class="panel-body">
+                            <div>
+                                <a href="rewin.rest.ubsi.gateway-2.3.2.jar">rewin.rest.ubsi.gateway-2.3.2.jar</a>
+                                <span class="content">
+                                    <span>44,602 KB</span>
+                                    <span>2022-10-28</span>
+                                </span>
+                            </div>
+                            <p>
+								----------------------------------------<br>
+								<b>2.3.2 @ 2022-10-20</b><br>
+								-- 依赖rewin.ubsi.core-2.3.2<br>
+								-- 返回结果增加了tailer<br>
+								-- 增加了/runtime运行信息接口<br>
+                            </p>
+                        </div>
                         <div class="panel-body">
                             <div>
                                 <a href="rewin.rest.ubsi.gateway-2.3.0.jar">rewin.rest.ubsi.gateway-2.3.0.jar</a>
@@ -205,7 +266,10 @@
                                 </span>
                             </div>
                             <p>
-                                独立运行的API网关，提供Restful-API，为其他应用转发微服务请求。（依赖微服务rewin.ubsi.gateway）
+								----------------------------------------<br>
+								<b>2.3.0 @ 2022-02-20</b><br>
+								-- 依赖rewin.ubsi.core-2.3.0<br>
+								-- 依赖spring-boot 2.6.6<br>
                             </p>
                         </div>
                     </div>
@@ -218,13 +282,33 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseScript">
                                 <span class="mingcheng">Web脚本服务</span>
                                 <div class="xinxi">
-                                    <span class="banben">1.0.6</span>
-                                    <span class="date">2022-07-10</span>
+                                    <span class="banben">1.1.0</span>
+                                    <span class="date">2022-10-28</span>
                                 </div>
                             </a>
                         </h4>
                     </div>
                     <div id="collapseScript" class="panel-collapse collapse">
+                        <div class="panel-body">
+							支持利用JavaScript脚本快速实现Restful-API，支持基于角色的权限控制。（依赖微服务rewin.ubsi.script）
+						</div>
+                        <div class="panel-body">
+                            <div>
+                                <a href="rewin.rest.ubsi.script-1.1.0.jar">rewin.rest.ubsi.script-1.1.0.jar</a>
+                                <span class="content">
+                                    <span>44,595 KB</span>
+                                    <span>2022-10-28</span>
+                                </span>
+                            </div>
+                            <p>
+								----------------------------------------<br>
+								<b>1.1.0 @ 2022-10-14</b><br>
+								-- 依赖rewin.ubsi.rest-2.3.2<br>
+								-- 增加了/request微服务请求转发接口<br>
+								-- 增加了统一的500异常处理，接口异常时会返回指定格式的500错误<br>
+								-- 将性能测试基准接口/ping转移到/client/ping<br>
+                            </p>
+                        </div>
                         <div class="panel-body">
                             <div>
                                 <a href="rewin.rest.ubsi.script-1.0.6.jar">rewin.rest.ubsi.script-1.0.6.jar</a>
@@ -234,7 +318,9 @@
                                 </span>
                             </div>
                             <p>
-                                支持利用JavaScript脚本快速实现Restful-API，支持基于角色的权限控制。（依赖微服务rewin.ubsi.script）
+								----------------------------------------<br>
+								<b>1.0.6 @ 2022-06-27</b><br>
+					        	-- 增加了/client/info接口<br>
                             </p>
                         </div>
                     </div>
