@@ -340,6 +340,59 @@
                         </div>
                     </div>
                 </div>
+				<div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <img src="../img/down2.png" alt="">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapsek8s">
+                                <span class="mingcheng">ubsi-for-k8s安装包</span>
+                                <div class="xinxi">
+                                    <span class="banben">1.0.2</span>
+                                    <span class="date">2024-08-08</span>
+                                </div>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsek8s" class="panel-collapse collapse">
+                        <div class="panel-body">
+							基于 k8s、helm chart 的 ubsi 的安装包
+						</div>
+                        <div class="panel-body">
+                            <div>
+                                <a href="ubsipaas-1.0.2.tgz">ubsipaas-1.0.2.tgz</a>
+                                <span class="content">
+                                    <span>708 KB</span>
+                                    <span>2024-08-08</span>
+                                </span>
+                            </div>
+                            <p>
+								----------------------------------------<br>
+								<b>环境说明：</b><br>
+								-- Linux 环境<br>
+                                -- k8s 环境<br>
+								-- k8s环境中安装了 ingress 控制器<br>
+								-- 安装 helm 工具包<br>
+								<b>执行安装命令：</b><br>
+								helm install ubsipaas ./ubsipaas-1.0.2.tgz \<br>
+								  &nbsp&nbsp&nbsp&nbsp--namespace extension-ubsipaas \<br>
+								  &nbsp&nbsp&nbsp&nbsp--set base.domain=rewin.ubsi.admin.com \<br>
+								  &nbsp&nbsp&nbsp&nbsp--set base.ingressPort=30888 \<br>
+								  &nbsp&nbsp&nbsp&nbsp--set mongodb.replicaCount=1 \<br>
+								  &nbsp&nbsp&nbsp&nbsp--set mongodb.architecture=standalone \<br>
+								  &nbsp&nbsp&nbsp&nbsp--set redis.replicaCount=1 \<br>
+								  &nbsp&nbsp&nbsp&nbsp--set redis.architecture=standalone<br>
+
+								<b>卸载命令：</b><br>
+								helm delete  ubsipaas -n extension-ubsipaas<br>
+								<b>注意事项：</b><br>
+								-- 安装程序的命名空间可以改动，但是需要修改应用程序所用的配置文件<br>
+								-- 需要修改配置字典：nginx-config、ubsi-redis-conf、ubsi-mongo-conf<br>
+								-- 以上，如果自己不能修改可以联系我们：`ubsi@rewin.com.cn`<br>
+								
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
