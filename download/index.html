@@ -348,31 +348,47 @@
                                 <span class="mingcheng">ubsi-for-k8s安装包</span>
                                 <div class="xinxi">
                                     <span class="banben">1.0.2</span>
-                                    <span class="date">2024-08-08</span>
+                                    <span class="date">2024-09-24</span>
                                 </div>
                             </a>
                         </h4>
                     </div>
                     <div id="collapsek8s" class="panel-collapse collapse">
                         <div class="panel-body">
-							基于 k8s、helm chart 的 ubsi 的安装包
+							基于 k8s、helm chart 的 ubsi 的安装包、docker镜像
 						</div>
                         <div class="panel-body">
                             <div>
-                                <a href="ubsipaas-1.0.2.tgz">ubsipaas-1.0.2.tgz</a>
+                                <a href="ubsi-for-k8s.tar">ubsi-for-k8s.tar</a>
                                 <span class="content">
-                                    <span>708 KB</span>
-                                    <span>2024-08-08</span>
+                                    <span>710 KB</span>
+                                    <span>2024-10-10</span>
                                 </span>
                             </div>
                             <p>
 								----------------------------------------<br>
-								<b>环境说明：</b><br>
-								-- Linux 环境<br>
-                                -- k8s 环境<br>
+								<b>文件说明：</b><br>
+                                -- ubsipaas-1.0.2.tgz：基于 k8s、helm chart 的 ubsi 的安装包<br/>
+								-- export_images.sh：docker镜像导出脚本<br/>
+								-- impt_repo.sh：docker镜像导入脚本<br/>
+								<b>环境说明：</b><br/>
+								-- Linux 环境<br/>
+								-- docker 环境<br/>
+								-- docker 镜像私有仓库<br/>
+								-- k8s 环境<br/>
 								-- k8s环境中安装了 ingress 控制器<br>
-								-- 安装 helm 工具包<br>
-								<b>执行安装命令：</b><br>
+								-- 安装 helm 工具包<br/>
+								<b>文件解压：</b><br/>
+								-- 将ubsi-for-k8s.tar上传到自己的能够连接互联网的linux目录<br/>
+								-- 解压文件：tar -xvf ubsi-for-k8s.tar<br/>
+								<b>docker镜像导出：</b><br/>
+								-- 增加脚本执行权限：chmod +x export_images.sh<br/>
+								-- 执行导入脚本：./export_images.sh<br/>
+								-- 待执行完脚本之后将压缩包和impt_repo.sh放到目标Linux中<br/>
+								<b>docker镜像导入：</b><br/>
+								-- 增加脚本执行权限：chmod +x impt_repo.sh<br/>
+								-- 执行导入脚本：./impt_repo.sh<br/>
+								<b>helm chart安装命令：</b><br/>
 								helm install ubsipaas ./ubsipaas-1.0.2.tgz \<br>
 								  &nbsp&nbsp&nbsp&nbsp--namespace extension-ubsipaas \<br>
 								  &nbsp&nbsp&nbsp&nbsp--set base.domain=rewin.ubsi.admin.com \<br>
@@ -382,13 +398,18 @@
 								  &nbsp&nbsp&nbsp&nbsp--set redis.replicaCount=1 \<br>
 								  &nbsp&nbsp&nbsp&nbsp--set redis.architecture=standalone<br>
 
-								<b>卸载命令：</b><br>
+								<b>helm chart卸载命令：</b><br>
 								helm delete  ubsipaas -n extension-ubsipaas<br>
 								<b>注意事项：</b><br>
-								-- 安装程序的命名空间可以改动，但是需要修改应用程序所用的配置文件<br>
-								-- 需要修改配置字典：nginx-config、ubsi-redis-conf、ubsi-mongo-conf<br>
+								-- 执行docker镜像脚本时需要在窗口输入：<br/>
+								&nbsp&nbsp&nbsp registry: 私有仓库地址<br>
+								&nbsp&nbsp&nbsp   namespace: 命名空间<br>
+								&nbsp&nbsp&nbsp  username: 私有仓库用户名<br>
+								&nbsp&nbsp&nbsp   password: 私有仓库密码<br>
+								-- ubsipaas-1.0.2.tgz可以单独使用，配合images.tar使用需要修改各个应用的镜像地址<br/>
+								&nbsp&nbsp&nbsp&nbsp安装程序的命名空间可以改动，但是需要修改应用程序所用的配置文件<br>
+								&nbsp&nbsp&nbsp&nbsp需要修改配置字典：nginx-config、ubsi-redis-conf、ubsi-mongo-conf<br>
 								-- 以上，如果自己不能修改可以联系我们：`ubsi@rewin.com.cn`<br>
-								
                             </p>
                         </div>
                     </div>
